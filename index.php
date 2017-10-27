@@ -87,11 +87,11 @@ function anime($keyword) {
     $parsed['id'] = (string) $xml->entry[0]->id;
     $parsed['image'] = (string) $xml->entry[0]->image;
     $parsed['title'] = (string) $xml->entry[0]->title;
-    $parsed['desc'] = "Episodes : ";
+    $parsed['desc'] = "Episode : ";
     $parsed['desc'] .= $xml->entry[0]->episodes;
-    $parsed['desc'] .= "\nScore : ";
+    $parsed['desc'] .= "\nNilai : ";
     $parsed['desc'] .= $xml->entry[0]->score;
-    $parsed['desc'] .= "\nType : ";
+    $parsed['desc'] .= "\nTipe : ";
     $parsed['desc'] .= $xml->entry[0]->type;
     $parsed['synopsis'] = str_replace("<br />", "\n", html_entity_decode((string) $xml->entry[0]->synopsis, ENT_QUOTES | ENT_XHTML, 'UTF-8'));
     return $parsed;
@@ -99,7 +99,7 @@ function anime($keyword) {
 
 function anime_syn($title) {
     $parsed = anime($title);
-    $result = "Title : " . $parsed['title'];
+    $result = "Judul : " . $parsed['title'];
     $result .= "\n\nSynopsis :\n" . $parsed['synopsis'];
     return $result;
 }
@@ -117,14 +117,14 @@ function urb_dict($keyword) {
     return $result;
 }
 
-//show menu, saat join dan command #/menu
-if ($type == 'join' || $command == '#/menu') {
+//show menu, saat join dan command /menu
+if ($type == 'join' || $command == '/menu') {
     $text = "mbeek (´▽｀)\nHere how to use me\n\n";
-    $text .= "1.#/def [keyword] - define something\n";
-    $text .= "2.#/img [keyword] - search image for something\n";
-    $text .= "3.#/anime [keyword] - search for an anime from MAL\n";
-    $text .= "4.#/anime-syn [keyword] - read an anime synopsis from MAL\n";
-    $text .= "5.#/goaway - I will leave this group";
+    $text .= "1./def [keyword] - define something\n";
+    $text .= "2./img [keyword] - search image for something\n";
+    $text .= "3./anime [keyword] - Nyari Anime Yang Ada Di MAL\n";
+    $text .= "4./anime-syn [keyword] - Sinopsis Anime Yang Ada Di MAL\n";
+    $text .= "5./goaway - Bot-nya Keluar";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -138,7 +138,8 @@ if ($type == 'join' || $command == '#/menu') {
 
 //pesan bergambar
 if ($message['type'] == 'text') {
-    if ($command == '#/def') {
+    if ($command == '
+    def') {
 
 
         $balas = array(
@@ -150,7 +151,7 @@ if ($message['type'] == 'text') {
                 )
             )
         );
-    } else if ($command == '#/goaway') {
+    } else if ($command == '/goaway') {
 
 $push = array(
 							'to' => $groupId,									
@@ -166,7 +167,7 @@ $push = array(
 		$client->pushMessage($push);
 
         $psn = $client->leaveGroup($groupId);
-    } else if ($command == '#/img') {
+    } else if ($command == '/img') {
         $hasil = img_search($options);
         $balas = array(
             'replyToken' => $replyToken,
@@ -178,7 +179,7 @@ $push = array(
                 )
             )
         );
-    } else if ($command == '#/pika') {
+    } else if ($command == '/pika') {
         $keyword = 'Zl_ZeIMHWjc';
         $image = 'https://img.youtube.com/vi/' . $keyword . '/2.jpg';
         $balas = array(
@@ -195,7 +196,7 @@ $push = array(
                 )
             )
         );
-    } else if ($command == '#/anime') {
+    } else if ($command == '/anime') {
         $result = anime($options);
         $altText = "Title : " . $result['title'];
         $altText .= "\n\n" . $result['desc'];
@@ -214,13 +215,13 @@ $push = array(
                         'actions' => array(
                             array(
                                 'type' => 'postback',
-                                'label' => 'Read Synopsis',
+                                'label' => 'Baca Sinopsis-nya',
                                 'data' => 'action=add&itemid=123',
-                                'text' => '#/anime-syn ' . $options
+                                'text' => '/anime-syn ' . $options
                             ),
                             array(
                                 'type' => 'uri',
-                                'label' => 'Myanimelist Page',
+                                'label' => 'Website MAL',
                                 'uri' => 'https://myanimelist.net/anime/' . $result['id']
                             )
                         )
@@ -228,7 +229,7 @@ $push = array(
                 )
             )
         );
-    } else if ($command == '#/anime-syn') {
+    } else if ($command == '/anime-syn') {
 
         $result = anime_syn($options);
         $balas = array(
