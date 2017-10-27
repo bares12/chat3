@@ -119,12 +119,12 @@ function urb_dict($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "mbeek (´▽｀)\nHere how to use me\n\n";
-    $text .= "1./def [keyword] - define something\n";
-    $text .= "2./img [keyword] - search image for something\n";
+    $text = "Terima Kasih Telah Mengundang Saya Ke Grup\nIni Keyword Yang Bisa Kalian Gunakan\n\n";
+    $text .= "1./def [keyword] - define something [ERROR]\n";
+    $text .= "2./img [keyword] - search image for something [ERROR]\n";
     $text .= "3./anime [keyword] - Nyari Anime Yang Ada Di MAL\n";
     $text .= "4./anime-syn [keyword] - Sinopsis Anime Yang Ada Di MAL\n";
-    $text .= "5./goaway - Bot-nya Keluar";
+    $text .= "5./keluar - Bot-nya Keluar";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -151,7 +151,7 @@ if ($message['type'] == 'text') {
                 )
             )
         );
-    } else if ($command == '/goaway') {
+    } else if ($command == '/keluar') {
 
 $push = array(
 							'to' => $groupId,									
