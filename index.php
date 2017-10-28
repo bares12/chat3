@@ -241,7 +241,35 @@ $push = array(
                 )
             )
         );
-    }
+    } else if ($command == '/keyword') {
+	        $balas = array(
+							'replyToken' => $replyToken,
+							'messages' => array(
+								array(
+										'type' => 'template',
+										'altText' => 'Deskripsi template',
+										'template' => array(
+											'type' => 'buttons',
+											'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farzain/api-line/master/zFz.png',
+											'title' => 'Youtube Farzain',
+											'text' => 'Klik tombol dibawahini',
+											'actions' => array(
+								array(
+										'type' => 'uri',
+										'label' => 'Farzain - zFz',
+										'uri' => 'https://youtube.com/c/zfz48',
+									),
+								array(
+										'type' => 'message',
+										'label' => 'yes',
+										'text' => 'yes',
+									)										
+                        )
+                  )
+             )					
+			 
+        )
+    );
 	
 }
 if (isset($balas)) {
