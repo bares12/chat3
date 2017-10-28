@@ -242,6 +242,7 @@ $push = array(
             )
         );
     } else if ($command == '/keyword') {
+	
 	        $balas = array(
 							'replyToken' => $replyToken,
 							'messages' => array(
@@ -270,6 +271,7 @@ $push = array(
 			 
         )
     );
+	}
 	
 }
 if (isset($balas)) {
