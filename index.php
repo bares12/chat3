@@ -248,22 +248,22 @@ $push = array(
 							'messages' => array(
 								array(
 										'type' => 'template',
-										'altText' => 'Deskripsi template',
+										'altText' => 'Keyword Bot',
 										'template' => array(
 											'type' => 'buttons',
 											'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farzain/api-line/master/zFz.png',
-											'title' => 'Youtube Farzain',
+											'title' => 'zFz Line Bot',
 											'text' => 'Klik tombol dibawahini',
 											'actions' => array(
 								array(
-										'type' => 'uri',
-										'label' => 'Farzain - zFz',
-										'uri' => 'https://youtube.com/c/zfz48',
+										'type' => 'message',
+										'label' => 'Cari Anime',
+										'text' => '/anime [Judul Anime]',
 									),
 								array(
 										'type' => 'message',
-										'label' => 'yes',
-										'text' => 'yes',
+										'label' => 'Cari Sinopsis Anime',
+										'text' => '/anime-syn [Judul Anime]',
 									)										
                         )
                   )
