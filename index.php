@@ -249,55 +249,53 @@ $push = array(
 				array(
 				'type' => 'template',
 				'altText' => 'this is a carousel template',
-				'template' => {
+				'template' => array(
 					'type' => 'carousel',
 					'columns' => [
 						{
-							'thumbnailImageUrl' => 'https=>//example.com/bot/images/item1.jpg',
+							'thumbnailImageUrl' => 'https://example.com/bot/images/item1.jpg',
 							'title' => 'this is menu',
 							'text' => 'description',
-							'actions' => [
-								{
+							'actions' => array(
 									'type' => 'postback',
 									'label' => 'Buy',
 									'data' => 'action=buy&itemid=111'
-								},
-								{
-									'type' => 'postback',
-									'label' => 'Add to cart',
-									'data' => 'action=add&itemid=111'
-								},
-								{
-									'type' => 'uri',
-									'label' => 'View detail',
-									'uri' => 'http=>//example.com/page/111'
-								}
-							]
-						},
-						{
-							'thumbnailImageUrl' => 'https=>//example.com/bot/images/item2.jpg',
-							'title' => 'this is menu',
-							'text' => 'description',
-							'actions' => [
-								{
+								),
+								array(
 									'type' => 'postback',
 									'label' => 'Buy',
-									'data' => 'action=buy&itemid=222'
-								},
-								{
+									'data' => 'action=buy&itemid=111'
+								),
+								array(
 									'type' => 'postback',
-									'label' => 'Add to cart',
-									'data' => 'action=add&itemid=222'
-								},
-								{
-									'type' => 'uri',
-									'label' => 'View detail',
-									'uri' => 'http=>//example.com/page/222'
-								}
-							]
+									'label' => 'Buy',
+									'uri' => 'http://example.com/page/111'
+								)
+							)
+						},
+						{
+							'thumbnailImageUrl' => 'https://example.com/bot/images/item1.jpg',
+							'title' => 'this is menu',
+							'text' => 'description',
+							'actions' => array(
+									'type' => 'postback',
+									'label' => 'Buy',
+									'data' => 'action=buy&itemid=111'
+								),
+								array(
+									'type' => 'postback',
+									'label' => 'Buy',
+									'data' => 'action=buy&itemid=111'
+								),
+								array(
+									'type' => 'postback',
+									'label' => 'Buy',
+									'uri' => 'http://example.com/page/111'
+								)
+							)
 						}
 					]
-				}
+				)
 }
 	
 }
