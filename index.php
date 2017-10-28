@@ -243,60 +243,34 @@ $push = array(
         );
     } else if ($command == '/keyword')  {
 	
-		$balas = array(
-			'replyToken' => $replyToken,
-			'messages' => array(
-				array(
-				'type' => 'template',
-				'altText' => 'this is a carousel template',
-				'template' => array(
-					'type' => 'carousel',
-					'columns' => [
-						{
-							'thumbnailImageUrl' => 'https://example.com/bot/images/item1.jpg',
-							'title' => 'this is menu',
-							'text' => 'description',
-							'actions' => array(
-									'type' => 'postback',
-									'label' => 'Buy',
-									'data' => 'action=buy&itemid=111'
-								),
+		        $balas = array(
+							'replyToken' => $replyToken,
+							'messages' => array(
 								array(
-									'type' => 'postback',
-									'label' => 'Buy',
-									'data' => 'action=buy&itemid=111'
-								),
+										'type' => 'template',
+										'altText' => 'Deskripsi template',
+										'template' => array(
+											'type' => 'buttons',
+											'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farzain/api-line/master/zFz.png',
+											'title' => 'Youtube Farzain',
+											'text' => 'Klik tombol dibawahini',
+											'actions' => array(
 								array(
-									'type' => 'postback',
-									'label' => 'Buy',
-									'uri' => 'http://example.com/page/111'
-								)
-							)
-						},
-						{
-							'thumbnailImageUrl' => 'https://example.com/bot/images/item1.jpg',
-							'title' => 'this is menu',
-							'text' => 'description',
-							'actions' => array(
-									'type' => 'postback',
-									'label' => 'Buy',
-									'data' => 'action=buy&itemid=111'
-								),
+										'type' => 'uri',
+										'label' => 'Farzain - zFz',
+										'uri' => 'https://youtube.com/c/zfz48',
+									),
 								array(
-									'type' => 'postback',
-									'label' => 'Buy',
-									'data' => 'action=buy&itemid=111'
-								),
-								array(
-									'type' => 'postback',
-									'label' => 'Buy',
-									'uri' => 'http://example.com/page/111'
-								)
-							)
-						}
-					]
-				)
-}
+										'type' => 'message',
+										'label' => 'yes',
+										'text' => 'yes',
+									)										
+                        )
+                  )
+             )					
+			 
+        )
+    );
 	
 }
 if (isset($balas)) {
