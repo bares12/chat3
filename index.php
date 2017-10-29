@@ -70,7 +70,7 @@ function img_search($keyword) {
 function anime($keyword) {
 
     $fullurl = 'https://myanimelist.net/api/anime/search.xml?q=' . $keyword;
-    $username = 'buntutkadal';
+    $username = 'jamal3213';
     $password = 'FZQYeZ6CE9is';
 
     $ch = curl_init();
