@@ -117,7 +117,31 @@ function urb_dict($keyword) {
     return $result;
 }
 
-#---------------------[TAMBAHAN FARZAIN]---------------------#
+#---------------------[IMDB Scraper]---------------------#
+function imdb_scraper($keyword) {
+    $uri = "http://www.omdbapi.com/?t=" . $keyword . '&plot=full&apikey=d5010ffe';
+
+    $response = Unirest\Request::get("$uri");
+
+
+    $json = json_decode($response->raw_body, true);
+    $title = $json['Title'];
+	$year = $json['Year'];
+	$genre = $json['Genre'];
+	$plot = $json['Plot'];
+	$poster = $json['Poster'];
+    return $result;
+}
+
+function film_syn($title) {
+    $parsed = imdb_scraper($title);
+    $result = "Judul : " . $json['Title'];
+    $result .= "\n\nSynopsis :\n" . $json['Plot'];
+    return $result;
+}
+#---------------------[IMDB Scraper]---------------------#
+
+#---------------------[SAVEITOFFLINE - YT]---------------------#
 function saveitoffline($keyword) {
     $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
 
@@ -145,7 +169,7 @@ function saveitoffline($keyword) {
 	$result .= $json['urls'][3]['id'];	
     return $result;
 }
-#---------------------[TAMBAHAN FARZAIN]---------------------#
+#---------------------[SAVEITOFFLINE - YT]---------------------#
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
@@ -270,6 +294,18 @@ $push = array(
                 )
             )
         );
+    } else if ($command == '/film-syn') {				#---------------------[TAMBAHAN FARZAIN]---------------------#
+
+        $result = film_syn($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/yt') { 					#---------------------[TAMBAHAN FARZAIN]---------------------#
 
         $result = saveitoffline($options);
@@ -284,6 +320,40 @@ $push = array(
 				    'type' => 'text',
 				    'text' => 'Silahkan Kalian Copy URL Download Yang Tersedia Diatas Sesuai Dengan Ukuran Yang Anda Inginkan, Dan Paste Di Browser HP Kalian'
 				)
+            )
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
+    } else if ($command == '/film') { 					#---------------------[TAMBAHAN FARZAIN]---------------------#
+
+        $result = imdb_scraper($options);
+        $altText = "Title : " . $json['Title'];
+        $altText .= "Tahun : " . $json['Year'];
+        $altText .= "Genre : " . $json['Genre'];
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => $altText,
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => $json['Title'],
+                        'thumbnailImageUrl' => $json['Poster'],
+                        'text' => 'Tahun : ' . $json['Year'],
+                        'actions' => array(
+                            array(
+                                'type' => 'postback',
+                                'label' => 'Baca Sinopsis-nya',
+                                'data' => 'action=add&itemid=123',
+                                'text' => '/film-syn ' . $options
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Sumber Web',
+                                'uri' => 'www.imdb.com/'
+                            )
+                        )
+                    )
+                )
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
