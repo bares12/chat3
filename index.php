@@ -66,7 +66,7 @@ function img_search($keyword) {
     $arrays = explode("<", $hasil);
     return explode('"', $arrays[291])[3];
 }
-
+#---------------------[TAMBAHAN FARZAIN]---------------------#
 function saveitoffline($keyword) {
     $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
 
@@ -74,11 +74,10 @@ function saveitoffline($keyword) {
 
 
     $json = json_decode($response->raw_body, true);
-    $result = $json['list'][0]['definition'];
-    $result .= "\n\nExamples : \n";
-    $result .= $json['list'][0]['example'];
+    $result = $json['urls'][3]['id'];
     return $result;
 }
+#---------------------[TAMBAHAN FARZAIN]---------------------#
 
 function anime($keyword) {
 
@@ -253,9 +252,9 @@ $push = array(
                 )
             )
         );
-    } else if ($command == '/igvid') {
+    } else if ($command == '/yt') { 					#---------------------[TAMBAHAN FARZAIN]---------------------#
 
-        $result = anime_syn($options);
+        $result = saveitoffline($options);
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -264,7 +263,7 @@ $push = array(
                     'text' => $result
                 )
             )
-        );
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
 	
 	        $balas = array(
