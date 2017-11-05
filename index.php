@@ -155,19 +155,19 @@ function shalat($keyword) {
 
     $json = json_decode($response->raw_body, true);
     $result = "Jadwal Shalat Sekitar ";
-	$result .= $json['location']['0']['address'];
+	$result .= $json['location']['address'];
 	$result .= "\nTanggal : ";
-	$result .= $json['time']['0']['date'];
+	$result .= $json['time']['date'];
 	$result .= "\n\nShubuh : ";
-	$result .= $json['data']['0']['Fajr'];
+	$result .= $json['data']['Fajr'];
 	$result .= "\nDzuhur : ";
-	$result .= $json['data']['0']['Dhuhr'];
+	$result .= $json['data']['Dhuhr'];
 	$result .= "\nAshar : ";
-	$result .= $json['data']['0']['Asr'];
+	$result .= $json['data']['Asr'];
 	$result .= "\nMaghrib : ";
-	$result .= $json['data']['0']['Maghrib'];
+	$result .= $json['data']['Maghrib'];
 	$result .= "\nIsya : ";
-	$result .= $json['data']['0']['Isha'];
+	$result .= $json['data']['Isha'];
     return $result;
 }	
 #---------------------[Shalat Scraper]---------------------#
