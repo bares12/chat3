@@ -278,7 +278,7 @@ $push = array(
 							'messages' => array(
 								array (
 										  'type' => 'template',
-										  'altText' => 'this is a carousel template',
+										  'altText' => 'Silahkan Pilih Keyword Yang Anda Inginkan',
 										  'template' => 
 										  array (
 										    'type' => 'carousel',
@@ -286,55 +286,55 @@ $push = array(
 										    array (
 										      0 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://example.com/bot/images/item1.jpg',
-										        'title' => 'this is menu',
-										        'text' => 'description',
+										        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farz404/zFzBot/master/zFz.png',
+										        'title' => 'Keyword 1',
+										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
-										            'type' => 'postback',
-										            'label' => 'Buy',
-										            'data' => 'action=buy&itemid=111',
+										            'type' => 'text',
+										            'label' => 'Cari Anime',
+										            'text' => '/anime [Judul Anime]',
 										          ),
 										          1 => 
 										          array (
-										            'type' => 'postback',
-										            'label' => 'Add to cart',
-										            'data' => 'action=add&itemid=111',
+										            'type' => 'text',
+										            'label' => 'Cari Sinopsis Anime',
+										            'text' => '/anime-syn [Judul Anime]',
 										          ),
 										          2 => 
 										          array (
-										            'type' => 'uri',
-										            'label' => 'View detail',
-										            'uri' => 'http://example.com/page/111',
+										            'type' => 'text',
+										            'label' => 'Download Youtube',
+										            'text' => '/yt [Link Youtube]',
 										          ),
 										        ),
 										      ),
 										      1 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://example.com/bot/images/item2.jpg',
-										        'title' => 'this is menu',
-										        'text' => 'description',
+										        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farz404/zFzBot/master/zFz.png',
+										        'title' => 'Keyword 2',
+										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
-										            'type' => 'postback',
-										            'label' => 'Buy',
-										            'data' => 'action=buy&itemid=222',
+										            'type' => 'text',
+										            'label' => 'Cari Anime',
+										            'text' => '/anime [Judul Anime]',
 										          ),
 										          1 => 
 										          array (
-										            'type' => 'postback',
-										            'label' => 'Add to cart',
-										            'data' => 'action=add&itemid=222',
+										            'type' => 'text',
+										            'label' => 'Cari Sinopsis Anime',
+										            'text' => '/anime-syn [Judul Anime]',
 										          ),
 										          2 => 
 										          array (
-										            'type' => 'uri',
-										            'label' => 'View detail',
-										            'uri' => 'http://example.com/page/222',
+										            'type' => 'text',
+										            'label' => 'Download Youtube',
+										            'text' => '/yt [Link Youtube]',
 										          ),
 										        ),
 										      ),
