@@ -147,24 +147,6 @@ function film_syn($keyword) {
 }
 #---------------------[IMDB Scraper]---------------------#
 
-#---------------------[Shalat Scraper]---------------------#
-function shalat_scrape($keyword) {
-    $uri = "https://time.siswadi.com/pray/" . $keyword;
-
-    $response = Unirest\Request::get("$uri");
-
-    $json = json_decode($response->raw_body, true);
-	$parsed = array();
-	
-	$parsed['shubuh'] = $json['data'][0]['Fajr'];
-	$parsed['dzuhur'] = $json['data'][0]['Dhuhr'];
-	$parsed['ashar'] = $json['data'][0]['Asr'];
-	$parsed['maghrib'] = $json['data'][0]['Maghrib'];
-	$parsed['isya'] = $json['data'][0]['Isha'];
-    return $result;
-}
-#---------------------[Shalat Scraper]---------------------#
-
 #---------------------[SAVEITOFFLINE - YT]---------------------#
 function saveitoffline($keyword) {
     $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
@@ -344,37 +326,6 @@ $push = array(
 				    'type' => 'text',
 				    'text' => 'Silahkan Kalian Copy URL Download Yang Tersedia Diatas Sesuai Dengan Ukuran Yang Anda Inginkan, Dan Paste Di Browser HP Kalian'
 				)
-            )
-        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == '/film') { 					#---------------------[TAMBAHAN FARZAIN]---------------------#
-
-        $result = imdb_scraper($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'template',
-                    'altText' => 'Result Film',
-                    'template' => array(	
-                        'type' => 'buttons',
-                        'title' => $title,
-                        'thumbnailImageUrl' => $poster
-                        'text' => 'Tahun : ' $year,
-                        'actions' => array(
-                            array(
-                                'type' => 'postback',
-                                'label' => 'Baca Sinopsis-nya',
-                                'data' => 'action=add&itemid=123',
-                                'text' => '/film-syn ' . $options
-                            ),
-                            array(
-                                'type' => 'uri',
-                                'label' => 'Sumber Web',
-                                'uri' => 'www.imdb.com/'
-                            )
-                        )
-                    )
-                )
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
