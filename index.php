@@ -147,6 +147,30 @@ function film_syn($keyword) {
 }
 #---------------------[IMDB Scraper]---------------------#
 
+#---------------------[Shalat Scraper]---------------------#
+function shalat($keyword) {
+    $uri = "https://time.siswadi.com/pray/" . $keyword;
+
+    $response = Unirest\Request::get("$uri");
+
+    $json = json_decode($response->raw_body, true);
+    $result = "Jadwal Shalat Sekitar ";
+	$result .= $json['location']['0']['address'];
+	$result .= "\nTanggal : ";
+	$result .= $json['time']['0']['date'];
+	$result .= "\n\nShubuh : ";
+	$result .= $json['data']['0']['Fajr'];
+	$result .= "\nDzuhur : ";
+	$result .= $json['data']['0']['Dhuhr'];
+	$result .= "\nAshar : ";
+	$result .= $json['data']['0']['Asr'];
+	$result .= "\nMaghrib : ";
+	$result .= $json['data']['0']['Maghrib'];
+	$result .= "\nIsya : ";
+	$result .= $json['data']['0']['Isha'];
+    return $result;
+#---------------------[Shalat Scraper]---------------------#
+
 #---------------------[SAVEITOFFLINE - YT]---------------------#
 function saveitoffline($keyword) {
     $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
@@ -291,6 +315,18 @@ $push = array(
     } else if ($command == '/anime-syn') {
 
         $result = anime_syn($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    } else if ($command == '/shalat') {
+
+        $result = shalat($options);
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
