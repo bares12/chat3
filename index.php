@@ -262,7 +262,7 @@ $push = array(
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => $result . '<<-- Buka link disamping dengan menggunakan browser ( Copy -> Paste ke Browser )'
+                    'text' => $result . ' <<-- Buka link disamping dengan menggunakan browser ( Copy -> Paste ke Browser )'
                 )
 				#array (
 				#	'type' => 'video',
@@ -276,28 +276,71 @@ $push = array(
 	        $balas = array(
 							'replyToken' => $replyToken,
 							'messages' => array(
-								array(
-										'type' => 'template',
-										'altText' => 'Keyword Bot',
-										'template' => array(
-											'type' => 'buttons',
-											'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farzain/api-line/master/zFz.png',
-											'title' => 'zFz Line Bot',
-											'text' => 'Klik tombol dibawah ini',
-											'actions' => array(
-								array(
-										'type' => 'message',
-										'label' => 'Cari Anime',
-										'text' => '/anime [Judul Anime]',
-									),
-								array(
-										'type' => 'message',
-										'label' => 'Cari Sinopsis Anime',
-										'text' => '/anime-syn [Judul Anime]',
-									)										
-                        )
-                  )
-             )					
+								array (
+										  'type' => 'template',
+										  'altText' => 'this is a carousel template',
+										  'template' => 
+										  array (
+										    'type' => 'carousel',
+										    'columns' => 
+										    array (
+										      0 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://example.com/bot/images/item1.jpg',
+										        'title' => 'this is menu',
+										        'text' => 'description',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Buy',
+										            'data' => 'action=buy&itemid=111',
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Add to cart',
+										            'data' => 'action=add&itemid=111',
+										          ),
+										          2 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'View detail',
+										            'uri' => 'http://example.com/page/111',
+										          ),
+										        ),
+										      ),
+										      1 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://example.com/bot/images/item2.jpg',
+										        'title' => 'this is menu',
+										        'text' => 'description',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Buy',
+										            'data' => 'action=buy&itemid=222',
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Add to cart',
+										            'data' => 'action=add&itemid=222',
+										          ),
+										          2 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'View detail',
+										            'uri' => 'http://example.com/page/222',
+										          ),
+										        ),
+										      ),
+										    ),
+										  ),
+										)					
 			 
         )
     );
