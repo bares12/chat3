@@ -293,21 +293,21 @@ $push = array(
 										        array (
 										          0 => 
 										          array (
-										            'type' => 'text',
-										            'label' => 'Cari Anime',
-										            'text' => '/anime [Judul Anime]',
+										            'type' => 'postback',
+										            'label' => 'Buy',
+										            'data' => 'action=buy&itemid=222',
 										          ),
 										          1 => 
 										          array (
-										            'type' => 'text',
-										            'label' => 'Cari Sinopsis Anime',
-										            'text' => '/anime-syn [Judul Anime]',
+										            'type' => 'postback',
+										            'label' => 'Add to cart',
+										            'data' => 'action=add&itemid=222',
 										          ),
 										          2 => 
 										          array (
-										            'type' => 'text',
-										            'label' => 'Download Youtube',
-										            'text' => '/yt [Link Youtube]',
+										            'type' => 'uri',
+										            'label' => 'View detail',
+										            'uri' => 'http://example.com/page/222',
 										          ),
 										        ),
 										      ),
@@ -320,21 +320,21 @@ $push = array(
 										        array (
 										          0 => 
 										          array (
-										            'type' => 'text',
-										            'label' => 'Cari Anime',
-										            'text' => '/anime [Judul Anime]',
+										            'type' => 'postback',
+										            'label' => 'Buy',
+										            'data' => 'action=buy&itemid=222',
 										          ),
 										          1 => 
 										          array (
-										            'type' => 'text',
-										            'label' => 'Cari Sinopsis Anime',
-										            'text' => '/anime-syn [Judul Anime]',
+										            'type' => 'postback',
+										            'label' => 'Add to cart',
+										            'data' => 'action=add&itemid=222',
 										          ),
 										          2 => 
 										          array (
-										            'type' => 'text',
-										            'label' => 'Download Youtube',
-										            'text' => '/yt [Link Youtube]',
+										            'type' => 'uri',
+										            'label' => 'View detail',
+										            'uri' => 'http://example.com/page/222',
 										          ),
 										        ),
 										      ),
