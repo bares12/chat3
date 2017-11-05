@@ -147,6 +147,22 @@ function film_syn($keyword) {
 }
 #---------------------[IMDB Scraper]---------------------#
 
+#---------------------[Shalat Scraper]---------------------#
+function shalat_scrape($keyword) {
+    $uri = "https://time.siswadi.com/pray/" . $keyword;
+
+    $response = Unirest\Request::get("$uri");
+
+    $json = json_decode($response->raw_body, true);
+	$parsed['shubuh'] = $json['data'][0]['Fajr'];
+	$parsed['dzuhur'] = $json['data'][0]['Dhuhr'];
+	$parsed['ashar'] = $json['data'][0]['Asr'];
+	$parsed['maghrib'] = $json['data'][0]['Maghrib'];
+	$parsed['isya'] = $json['data'][0]['Isha'];
+    return $result;
+}
+#---------------------[Shalat Scraper]---------------------#
+
 #---------------------[SAVEITOFFLINE - YT]---------------------#
 function saveitoffline($keyword) {
     $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
@@ -312,6 +328,50 @@ $push = array(
                 )
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
+    } else if ($command == '/shalat') {
+        $result = shalat_scrape($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => 'Result Shalat',
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => 'Jadwal Shalat di ' .$options,
+                        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farz404/zFzBot/master/150718725359d5da352997d.jpg',
+                        'text' => 'Berikut Jadwal Shalat Di ' .$options,
+                        'actions' => array(
+                            array(
+                                'type' => 'postback',
+                                'label' => $result['shubuh'],
+                                'data' => 'action=add&itemid=123',
+                            ),
+                            array(
+                                'type' => 'postback',
+                                'label' => $result['dzuhur'],
+                                'data' => 'action=add&itemid=123',
+                            ),
+							array(
+							    'type' => 'postback',
+							    'label' => $result['ashar'],
+							    'data' => 'action=add&itemid=123',
+							),
+							array(
+							    'type' => 'postback',
+							    'label' => $result['maghrib'],
+							    'data' => 'action=add&itemid=123',
+							),
+							array(
+							    'type' => 'postback',
+							    'label' => $result['isya'],
+							    'data' => 'action=add&itemid=123',
+							),
+                        )
+                    )
+                )
+            )
+        );
     } else if ($command == '/yt') { 					#---------------------[TAMBAHAN FARZAIN]---------------------#
 
         $result = saveitoffline($options);
@@ -339,9 +399,9 @@ $push = array(
                     'altText' => 'Result Film',
                     'template' => array(	
                         'type' => 'buttons',
-                        'title' => $json['Title'],
-                        'thumbnailImageUrl' => $json['Poster'],
-                        'text' => 'Tahun : ' . $json['Year'],
+                        'title' => $title,
+                        'thumbnailImageUrl' => $poster
+                        'text' => 'Tahun : ' $year,
                         'actions' => array(
                             array(
                                 'type' => 'postback',
