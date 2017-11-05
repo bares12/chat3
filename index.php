@@ -66,25 +66,6 @@ function img_search($keyword) {
     $arrays = explode("<", $hasil);
     return explode('"', $arrays[291])[3];
 }
-#---------------------[TAMBAHAN FARZAIN]---------------------#
-function saveitoffline($keyword) {
-    $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
-
-    $response = Unirest\Request::get("$uri");
-
-
-    $json = json_decode($response->raw_body, true);
-    $result0 = $json['urls'][0]['id'];
-	$result1 = $json['urls'][1]['id'];
-	$result2 = $json['urls'][2]['id'];
-	$label0 = $json['urls'][0]['label'];
-	$label0 = $json['urls'][1]['label'];
-	$label0 = $json['urls'][2]['label'];
-	$judul = $json['title'];
-	$gambar = $json['thumbnail'];
-    return $result;
-}
-#---------------------[TAMBAHAN FARZAIN]---------------------#
 
 function anime($keyword) {
 
@@ -135,6 +116,32 @@ function urb_dict($keyword) {
     $result .= $json['list'][0]['example'];
     return $result;
 }
+
+#---------------------[TAMBAHAN FARZAIN]---------------------#
+function saveitoffline($keyword) {
+    $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
+
+    $response = Unirest\Request::get("$uri");
+
+
+    $json = json_decode($response->raw_body, true);
+	$result = "Judul : \n";
+	$result .= $json['title'];
+	$result .= "\n\nUkuran : \n";
+	$result .= $json['urls'][0]['label'];
+	$result .= "\n\nURL Download : \n";
+	$result .= $json['urls'][0]['id'];
+	$result .= "\n\nUkuran : \n";
+	$result .= $json['urls'][1]['label'];
+	$result .= "\n\nURL Download : \n";
+	$result .= $json['urls'][1]['id'];
+	$result .= "\n\nUkuran : \n";
+	$result .= $json['urls'][2]['label'];	
+	$result .= "\n\nURL Download : \n";
+	$result .= $json['urls'][2]['id'];
+    return $result;
+}
+#---------------------[TAMBAHAN FARZAIN]---------------------#
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
@@ -267,7 +274,7 @@ $push = array(
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => 'Judul : ' . $judul . '\n\nUkuran: ' . $label0 . '\n\nLink Download: ' . $result0 .  '\n\nUkuran: ' . $label1 . '\n\nLink Download: ' . $result1 .  '\n\nUkuran: ' . $label2 . '\n\nLink Download: ' . $result2
+                    'text' => saveitoffline($options)
                 ),
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
