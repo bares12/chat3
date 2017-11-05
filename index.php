@@ -282,7 +282,7 @@ $push = array(
                 ),
 				array(
 				    'type' => 'text',
-				    'text' => 'Silahkan Kalian Copy URL Download Yang Tersedia Diatas Sesuai Dengan Ukuran Yang Anda Inginkan'
+				    'text' => 'Silahkan Kalian Copy URL Download Yang Tersedia Diatas Sesuai Dengan Ukuran Yang Anda Inginkan, Dan Paste Di Browser HP Kalian'
 				)
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
