@@ -133,7 +133,7 @@ function imdb_scraper($keyword) {
     return $result;
 }
 
-function film_syn($title) {
+function film_syn($keyword) {
     $uri = "http://www.omdbapi.com/?t=" . $keyword . '&plot=full&apikey=d5010ffe';
 
     $response = Unirest\Request::get("$uri");
