@@ -147,23 +147,23 @@ function film_syn($keyword) {
 }
 #---------------------[IMDB Scraper]---------------------#
 
-#---------------------[Shalat Scraper]---------------------#
-function shalat_scrape($keyword) {
-    $uri = "https://time.siswadi.com/pray/" . $keyword;
-
-    $response = Unirest\Request::get("$uri");
-
-    $json = json_decode($response->raw_body, true);
-	$parsed = array();
-	
-	$parsed['shubuh'] = $json['data'][0]['Fajr'];
-	$parsed['dzuhur'] = $json['data'][0]['Dhuhr'];
-	$parsed['ashar'] = $json['data'][0]['Asr'];
-	$parsed['maghrib'] = $json['data'][0]['Maghrib'];
-	$parsed['isya'] = $json['data'][0]['Isha'];
-    return $result;
-}
-#---------------------[Shalat Scraper]---------------------#
+##---------------------[Shalat Scraper]---------------------#
+#function shalat_scrape($keyword) {
+#    $uri = "https://time.siswadi.com/pray/" . $keyword;
+#
+#    $response = Unirest\Request::get("$uri");
+#
+#    $json = json_decode($response->raw_body, true);
+#	$parsed = array();
+#	
+#	$parsed['shubuh'] = $json['data'][0]['Fajr'];
+#	$parsed['dzuhur'] = $json['data'][0]['Dhuhr'];
+#	$parsed['ashar'] = $json['data'][0]['Asr'];
+#	$parsed['maghrib'] = $json['data'][0]['Maghrib'];
+#	$parsed['isya'] = $json['data'][0]['Isha'];
+#    return $result;
+#}
+##---------------------[Shalat Scraper]---------------------#
 
 #---------------------[SAVEITOFFLINE - YT]---------------------#
 function saveitoffline($keyword) {
