@@ -74,7 +74,12 @@ function saveitoffline($keyword) {
 
 
     $json = json_decode($response->raw_body, true);
-    $result = $json['urls'][3]['id'];
+    $result0 = $json['urls'][0]['id'];
+	$result1 = $json['urls'][1]['id'];
+	$result2 = $json['urls'][2]['id'];
+	$label0 = $json['urls'][0]['label'];
+	$label0 = $json['urls'][1]['label'];
+	$label0 = $json['urls'][2]['label'];
 	$judul = $json['title'];
 	$gambar = $json['thumbnail'];
     return $result;
@@ -262,13 +267,13 @@ $push = array(
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => $result . ' <<-- Buka link disamping dengan menggunakan browser ( Copy -> Paste ke Browser )'
-                )
-				#array (
-				#	'type' => 'video',
-				#	'originalContentUrl' => $result,
-				#	'previewImageUrl' => $gambar,
-				#)
+                    'text' => $result0 . ' <<-- Buka link disamping dengan menggunakan browser ( Copy -> Paste ke Browser )'
+                ),
+				array (
+					'type' => 'video',
+					'originalContentUrl' => $result0,
+					'previewImageUrl' => $gambar,
+				)
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
