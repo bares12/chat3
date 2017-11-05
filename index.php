@@ -139,6 +139,10 @@ function saveitoffline($keyword) {
 	$result .= $json['urls'][2]['label'];	
 	$result .= "\n\nURL Download : \n";
 	$result .= $json['urls'][2]['id'];
+	$result .= "\n\nUkuran : \n";
+	$result .= $json['urls'][3]['label'];	
+	$result .= "\n\nURL Download : \n";
+	$result .= $json['urls'][3]['id'];	
     return $result;
 }
 #---------------------[TAMBAHAN FARZAIN]---------------------#
@@ -276,6 +280,10 @@ $push = array(
                     'type' => 'text',
                     'text' => saveitoffline($options)
                 ),
+				array(
+				    'type' => 'text',
+				    'text' => 'Silahkan Kalian Copy URL Download Yang Tersedia Diatas Sesuai Dengan Ukuran Yang Anda Inginkan'
+				)
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
