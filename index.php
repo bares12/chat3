@@ -294,20 +294,23 @@ $push = array(
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Buy',
-										            'data' => 'action=buy&itemid=222',
+										            'label' => 'Cari Anime',
+										            'data' => 'action=add&itemid=123',
+													'text' => '/anime [Judul Anime]'
 										          ),
 										          1 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Add to cart',
-										            'data' => 'action=add&itemid=222',
-										          ),
+										            'label' => 'Cari Sinopsis Anime',
+										            'data' => 'action=add&itemid=123',
+													'text' => '/anime-syn [Judul Anime]'
+												  ),
 										          2 => 
 										          array (
-										            'type' => 'uri',
-										            'label' => 'View detail',
-										            'uri' => 'http://example.com/page/222',
+										            'type' => 'postback',
+										            'label' => 'Cari Youtube',
+										            'data' => 'action=add&itemid=123',
+													'text' => '/yt [URL Video Youtube]'
 										          ),
 										        ),
 										      ),
@@ -321,20 +324,23 @@ $push = array(
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Buy',
-										            'data' => 'action=buy&itemid=222',
+										            'label' => 'Cari Film',
+										            'data' => 'action=add&itemid=123',
+													'text' => '/film [Judul Film]'
 										          ),
 										          1 => 
 										          array (
-										            'type' => 'postback',
-										            'label' => 'Add to cart',
-										            'data' => 'action=add&itemid=222',
+													'type' => 'postback',
+													'label' => 'Cari Sinopsis Film',
+													'data' => 'action=add&itemid=123',
+													'text' => '/film-syn [Judul Film]'
 										          ),
 										          2 => 
 										          array (
-										            'type' => 'uri',
-										            'label' => 'View detail',
-										            'uri' => 'http://example.com/page/222',
+													'type' => 'postback',
+													'label' => 'Cari Gambar',
+													'data' => 'action=add&itemid=123',
+													'text' => '/gambar [Kata Kunci]'
 										          ),
 										        ),
 										      ),
