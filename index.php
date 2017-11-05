@@ -267,13 +267,8 @@ $push = array(
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => $result0 . ' <<-- Buka link disamping dengan menggunakan browser ( Copy -> Paste ke Browser )'
+                    'text' => 'Judul : ' . $judul . '\n\nUkuran: ' . $label0 . '\n\nLink Download: ' . $result0 .  '\n\nUkuran: ' . $label1 . '\n\nLink Download: ' . $result1 .  '\n\nUkuran: ' . $label2 . '\n\nLink Download: ' . $result2
                 ),
-				array (
-					'type' => 'video',
-					'originalContentUrl' => $result0,
-					'previewImageUrl' => $gambar,
-				)
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
