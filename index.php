@@ -169,6 +169,7 @@ function shalat($keyword) {
 	$result .= "\nIsya : ";
 	$result .= $json['data']['0']['Isha'];
     return $result;
+}	
 #---------------------[Shalat Scraper]---------------------#
 
 #---------------------[SAVEITOFFLINE - YT]---------------------#
