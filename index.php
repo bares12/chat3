@@ -67,6 +67,19 @@ function img_search($keyword) {
     return explode('"', $arrays[291])[3];
 }
 
+function saveitoffline($keyword) {
+    $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
+
+    $response = Unirest\Request::get("$uri");
+
+
+    $json = json_decode($response->raw_body, true);
+    $result = $json['list'][0]['definition'];
+    $result .= "\n\nExamples : \n";
+    $result .= $json['list'][0]['example'];
+    return $result;
+}
+
 function anime($keyword) {
 
     $fullurl = 'https://myanimelist.net/api/anime/search.xml?q=' . $keyword;
@@ -138,8 +151,7 @@ if ($type == 'join' || $command == '/menu') {
 
 //pesan bergambar
 if ($message['type'] == 'text') {
-    if ($command == '
-    def') {
+    if ($command == 'def') {
 
 
         $balas = array(
@@ -230,6 +242,18 @@ $push = array(
             )
         );
     } else if ($command == '/anime-syn') {
+
+        $result = anime_syn($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    } else if ($command == '/igvid') {
 
         $result = anime_syn($options);
         $balas = array(
