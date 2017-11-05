@@ -300,9 +300,9 @@ $push = array(
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array(
+                array( 
                     'type' => 'text',
-                    'text' => $result
+                    'text' => film_syn($options)
                 )
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
@@ -325,16 +325,13 @@ $push = array(
     } else if ($command == '/film') { 					#---------------------[TAMBAHAN FARZAIN]---------------------#
 
         $result = imdb_scraper($options);
-        $altText = "Title : " . $json['Title'];
-        $altText .= "Tahun : " . $json['Year'];
-        $altText .= "Genre : " . $json['Genre'];
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array(
                     'type' => 'template',
-                    'altText' => $altText,
-                    'template' => array(
+                    'altText' => 'Result Film',
+                    'template' => array(	
                         'type' => 'buttons',
                         'title' => $json['Title'],
                         'thumbnailImageUrl' => $json['Poster'],
