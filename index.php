@@ -134,9 +134,15 @@ function imdb_scraper($keyword) {
 }
 
 function film_syn($title) {
-    $parsed = imdb_scraper($title);
-    $result = "Judul : " . $json['Title'];
-    $result .= "\n\nSynopsis :\n" . $json['Plot'];
+    $uri = "http://www.omdbapi.com/?t=" . $keyword . '&plot=full&apikey=d5010ffe';
+
+    $response = Unirest\Request::get("$uri");
+
+    $json = json_decode($response->raw_body, true);
+    $result = "Judul : \n";
+	$result .= $json['Title'];
+	$result .= "\n\nSinopsis : \n";
+	$result .= $json['Plot'];
     return $result;
 }
 #---------------------[IMDB Scraper]---------------------#
