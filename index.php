@@ -263,12 +263,12 @@ $push = array(
                 array(
                     'type' => 'text',
                     'text' => $result . '<<-- Buka link disamping dengan menggunakan browser ( Copy -> Paste ke Browser )'
-                ),
-				array (
-					'type' => 'video',
-					'originalContentUrl' => $result,
-					'previewImageUrl' => $gambar,
-				)
+                )
+				#array (
+				#	'type' => 'video',
+				#	'originalContentUrl' => $result,
+				#	'previewImageUrl' => $gambar,
+				#)
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
