@@ -154,6 +154,8 @@ function shalat_scrape($keyword) {
     $response = Unirest\Request::get("$uri");
 
     $json = json_decode($response->raw_body, true);
+	$parsed = array();
+	
 	$parsed['shubuh'] = $json['data'][0]['Fajr'];
 	$parsed['dzuhur'] = $json['data'][0]['Dhuhr'];
 	$parsed['ashar'] = $json['data'][0]['Asr'];
