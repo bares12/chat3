@@ -75,6 +75,8 @@ function saveitoffline($keyword) {
 
     $json = json_decode($response->raw_body, true);
     $result = $json['urls'][3]['id'];
+	$judul = $json['title'];
+	$gambar = $json['thumbnail'];
     return $result;
 }
 #---------------------[TAMBAHAN FARZAIN]---------------------#
@@ -260,8 +262,13 @@ $push = array(
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => $result
-                )
+                    'text' => $result . '<<-- Buka link disamping dengan menggunakan browser ( Copy -> Paste ke Browser )'
+                ),
+				array (
+					'type' => 'video',
+					'originalContentUrl' => $result,
+					'previewImageUrl' => $gambar,
+				)
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
@@ -276,7 +283,7 @@ $push = array(
 											'type' => 'buttons',
 											'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farzain/api-line/master/zFz.png',
 											'title' => 'zFz Line Bot',
-											'text' => 'Klik tombol dibawahini',
+											'text' => 'Klik tombol dibawah ini',
 											'actions' => array(
 								array(
 										'type' => 'message',
