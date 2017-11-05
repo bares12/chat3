@@ -438,6 +438,36 @@ $push = array(
 										          ),
 										        ),
 										      ),
+										      2 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farz404/zFzBot/master/zFz.png',
+										        'title' => 'Keyword 3',
+										        'text' => 'Silahkan Dipilih',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Jadwal Shalat',
+										            'data' => 'action=add&itemid=123',
+													'text' => 'Ketik /shalat [Lokasi]'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Cari Sinopsis Film',
+													'data' => 'action=add&itemid=123',
+													'text' => 'Ketik /cuaca [Lokasi]'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'KOSONG',
+													'data' => 'action=add&itemid=123',
+													'text' => 'KOSONG'
+										          ),
+										        ),
+										      ),											  
 										    ),
 										  ),
 										)					
