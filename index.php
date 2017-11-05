@@ -311,21 +311,21 @@ $push = array(
 										            'type' => 'postback',
 										            'label' => 'Cari Anime',
 										            'data' => 'action=add&itemid=123',
-													'text' => '/anime [Judul Anime]'
+													'text' => 'Ketik /anime [Judul Anime]'
 										          ),
 										          1 => 
 										          array (
 										            'type' => 'postback',
 										            'label' => 'Cari Sinopsis Anime',
 										            'data' => 'action=add&itemid=123',
-													'text' => '/anime-syn [Judul Anime]'
+													'text' => 'Ketik /anime-syn [Judul Anime]'
 												  ),
 										          2 => 
 										          array (
 										            'type' => 'postback',
 										            'label' => 'Cari Youtube',
 										            'data' => 'action=add&itemid=123',
-													'text' => '/yt [URL Video Youtube]'
+													'text' => 'Ketik /yt [URL Video Youtube]'
 										          ),
 										        ),
 										      ),
@@ -341,21 +341,21 @@ $push = array(
 										            'type' => 'postback',
 										            'label' => 'Cari Film',
 										            'data' => 'action=add&itemid=123',
-													'text' => '/film [Judul Film]'
+													'text' => 'Ketik /film [Judul Film]'
 										          ),
 										          1 => 
 										          array (
 													'type' => 'postback',
 													'label' => 'Cari Sinopsis Film',
 													'data' => 'action=add&itemid=123',
-													'text' => '/film-syn [Judul Film]'
+													'text' => 'Ketik /film-syn [Judul Film]'
 										          ),
 										          2 => 
 										          array (
 													'type' => 'postback',
 													'label' => 'Cari Gambar',
 													'data' => 'action=add&itemid=123',
-													'text' => '/gambar [Kata Kunci]'
+													'text' => 'Ketik /gambar [Kata Kunci]'
 										          ),
 										        ),
 										      ),
