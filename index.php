@@ -180,9 +180,9 @@ function cuaca($keyword) {
 
     $json = json_decode($response->raw_body, true);
     $result = "Ramalan Cuaca Di ";
-	$result .= $json['sys']['name'];
+	$result .= $json['name'];
 	$result .= "\n\nCuaca : ";
-	$result .= $json['weather']['0']['date'];
+	$result .= $json['weather']['0']['main'];
 	$result .= "\nDeskripsi : ";
 	$result .= $json['weather']['0']['description'];
     return $result;
