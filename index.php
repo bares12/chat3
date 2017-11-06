@@ -172,6 +172,22 @@ function shalat($keyword) {
 }	
 #---------------------[Shalat Scraper]---------------------#
 
+#---------------------[Cuaca]---------------------#
+function cuaca($keyword) {
+    $uri = "http://api.openweathermap.org/data/2.5/weather?q=" . $keyword . '&units=metric&appid=e172c2f3a3c620591582ab5242e0e6c4';
+
+    $response = Unirest\Request::get("$uri");
+
+    $json = json_decode($response->raw_body, true);
+    $result = "Ramalan Cuaca Di ";
+	$result .= $json['sys']['name'];
+	$result .= "\n\nCuaca : ";
+	$result .= $json['weather']['0']['date'];
+	$result .= "\nDeskripsi : ";
+	$result .= $json['weather']['0']['description'];
+    return $result;
+#---------------------[Cuaca]---------------------#
+
 #---------------------[SAVEITOFFLINE - YT]---------------------#
 function saveitoffline($keyword) {
     $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
@@ -346,6 +362,18 @@ $push = array(
                 array( 
                     'type' => 'text',
                     'text' => film_syn($options)
+                )
+            )
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
+    } else if ($command == '/cuaca') {				#---------------------[TAMBAHAN FARZAIN]---------------------#
+
+        $result = cuaca($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array( 
+                    'type' => 'text',
+                    'text' => cuaca($options)
                 )
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
