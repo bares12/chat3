@@ -186,6 +186,7 @@ function cuaca($keyword) {
 	$result .= "\nDeskripsi : ";
 	$result .= $json['weather']['0']['description'];
     return $result;
+}	
 #---------------------[Cuaca]---------------------#
 
 #---------------------[SAVEITOFFLINE - YT]---------------------#
@@ -344,6 +345,18 @@ $push = array(
     } else if ($command == '/shalat') {
 
         $result = shalat($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    } else if ($command == '/cuaca') {
+
+        $result = cuaca($options);
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
