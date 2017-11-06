@@ -365,18 +365,6 @@ $push = array(
                 )
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == '/cuaca') {				#---------------------[TAMBAHAN FARZAIN]---------------------#
-
-        $result = cuaca($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array( 
-                    'type' => 'text',
-                    'text' => cuaca($options)
-                )
-            )
-        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/yt') { 					#---------------------[TAMBAHAN FARZAIN]---------------------#
 
         $result = saveitoffline($options);
