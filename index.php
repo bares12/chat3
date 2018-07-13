@@ -221,7 +221,7 @@ function saveitoffline($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Terima Kasih Telah Mengundang Saya Ke Grup\nIni Keyword Yang Bisa Kalian Gunakan /menu";
+    $text = "Terima Kasih Telah Mengundang Saya Ke Grup\nIni Keyword Yang Bisa Kalian Gunakan /keyword";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -388,7 +388,7 @@ $push = array(
 				)
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == '/menu') {
+    } else if ($command == '/keyword') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
