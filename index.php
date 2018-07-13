@@ -232,51 +232,6 @@ if ($type == 'join' || $command == '/menu') {
         )
     );
 }
-
-if($message['type']=='text')
-{
-	if($pesan_datang=='admin')
-	{
-		
-		
-		$balas = array(
-							'replyToken' => $replyToken,														
-							'messages' => array(
-array (
-  'type' => 'template',
-  'altText' => 'Send a template.',
-  'template' => 
-  array (
-    'type' => 'carousel',
-    'actions' => 
-    array (
-    ),
-    'columns' => 
-    array (
-      0 => 
-      array (
-        'thumbnailImageUrl' => 'https://pm1.narvii.com/6448/76156a7706585cb6b463531e9aa42cdc7f6180fe_hq.jpg',
-        'title' => 'Admin',
-        'text' => 'Ini Adalah Kontak Admin',
-        'actions' => 
-        array (
-          0 => 
-          array (
-            'type' => 'uri',
-            'label' => 'Admin 1',
-            'uri' => 'https://bit.ly/2J3ywc3',
-          ),
-          1 => 
-          array (
-            'type' => 'uri',
-            'label' => 'Admin 2',
-            'uri' => 'https://bit.ly/2J3ywc3',
-          ),
-        ),
-      ),
-    ),
-  ),
-)
 //pesan bergambar
 if ($message['type'] == 'text') {
     if ($command == 'def') {
@@ -529,10 +484,9 @@ $push = array(
 										          ),
 										          2 => 
 										          array (
-													'type' => 'postback',
+													'type' => 'uri',
 													'label' => 'Admin',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Admin'
+													'uri' => 'https://bit.ly/2J3ywc3'
 										          ),
 										        ),
 										      ),											  
