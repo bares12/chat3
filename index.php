@@ -221,12 +221,7 @@ function saveitoffline($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Terima Kasih Telah Mengundang Saya Ke Grup\nIni Keyword Yang Bisa Kalian Gunakan\n\n";
-    $text .= "1./def [keyword] - define something [ERROR]\n";
-    $text .= "2./img [keyword] - search image for something [ERROR]\n";
-    $text .= "3./anime [keyword] - Nyari Anime Yang Ada Di MAL\n";
-    $text .= "4./anime-syn [keyword] - Sinopsis Anime Yang Ada Di MAL\n";
-    $text .= "5./keluar - Bot-nya Keluar";
+    $text = "Terima Kasih Telah Mengundang Saya Ke Grup\nIni Keyword Yang Bisa Kalian Gunakan /menu";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -238,6 +233,50 @@ if ($type == 'join' || $command == '/menu') {
     );
 }
 
+if($message['type']=='text')
+{
+	if($pesan_datang=='admin')
+	{
+		
+		
+		$balas = array(
+							'replyToken' => $replyToken,														
+							'messages' => array(
+array (
+  'type' => 'template',
+  'altText' => 'Send a template.',
+  'template' => 
+  array (
+    'type' => 'carousel',
+    'actions' => 
+    array (
+    ),
+    'columns' => 
+    array (
+      0 => 
+      array (
+        'thumbnailImageUrl' => 'https://pm1.narvii.com/6448/76156a7706585cb6b463531e9aa42cdc7f6180fe_hq.jpg',
+        'title' => 'Admin',
+        'text' => 'Ini Adalah Kontak Admin',
+        'actions' => 
+        array (
+          0 => 
+          array (
+            'type' => 'uri',
+            'label' => 'Admin 1',
+            'uri' => 'https://bit.ly/2J3ywc3',
+          ),
+          1 => 
+          array (
+            'type' => 'uri',
+            'label' => 'Admin 2',
+            'uri' => 'https://bit.ly/2J3ywc3',
+          ),
+        ),
+      ),
+    ),
+  ),
+)
 //pesan bergambar
 if ($message['type'] == 'text') {
     if ($command == 'def') {
@@ -394,7 +433,7 @@ $push = array(
 				)
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == '/keyword') {
+    } else if ($command == '/menu') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
@@ -409,7 +448,7 @@ $push = array(
 										    array (
 										      0 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farz404/zFzBot/master/zFz.png',
+										        'thumbnailImageUrl' => 'https://i.pinimg.com/736x/ea/16/db/ea16dbb67f786d25b6003fc01133c0cf--blue-exorcist-anime-ao-no-exorcist-rin-hot.jpg',
 										        'title' => 'Keyword 1',
 										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
@@ -439,7 +478,7 @@ $push = array(
 										      ),
 										      1 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farz404/zFzBot/master/zFz.png',
+										        'thumbnailImageUrl' => 'http://animuverse.com/wp-content/uploads/2016/09/Funny-Anime-Wallpaper-750x421.jpg',
 										        'title' => 'Keyword 2',
 										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
@@ -469,7 +508,7 @@ $push = array(
 										      ),
 										      2 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://raw.githubusercontent.com/farz404/zFzBot/master/zFz.png',
+										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
 										        'title' => 'Keyword 3',
 										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
@@ -491,9 +530,9 @@ $push = array(
 										          2 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'KOSONG',
+													'label' => 'Admin',
 													'data' => 'action=add&itemid=111',
-													'text' => 'KOSONG'
+													'text' => 'Admin'
 										          ),
 										        ),
 										      ),											  
