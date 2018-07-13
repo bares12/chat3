@@ -403,7 +403,7 @@ $push = array(
 										    array (
 										      0 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://i.pinimg.com/736x/ea/16/db/ea16dbb67f786d25b6003fc01133c0cf--blue-exorcist-anime-ao-no-exorcist-rin-hot.jpg',
+										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
 										        'title' => 'Keyword 1',
 										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
@@ -433,7 +433,7 @@ $push = array(
 										      ),
 										      1 => 
 										      array (
-										        'thumbnailImageUrl' => 'http://animuverse.com/wp-content/uploads/2016/09/Funny-Anime-Wallpaper-750x421.jpg',
+										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
 										        'title' => 'Keyword 2',
 										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
@@ -486,6 +486,7 @@ $push = array(
 										          array (
 													'type' => 'uri',
 													'label' => 'Admin',
+													'data' => 'action=add&itemid=111',
 													'uri' => 'https://bit.ly/2J3ywc3'
 										          ),
 										        ),
@@ -502,9 +503,6 @@ $push = array(
 if (isset($balas)) {
     $result = json_encode($balas);
 //$result = ob_get_clean();
-
     file_put_contents('./balasan.json', $result);
-
-
     $client->replyMessage($balas);
 }?>
