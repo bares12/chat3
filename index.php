@@ -220,8 +220,8 @@ function saveitoffline($keyword) {
 #---------------------[SAVEITOFFLINE - YT]---------------------#
 
 //show menu, saat join dan command /menu
-if ($type == 'join' || $command == '/menu') {
-    $text = "Terima Kasih Telah Mengundang Saya Ke Grup\nIni Keyword Yang Bisa Kalian Gunakan /keyword";
+if ($type == 'join' || $command == 'help') {
+    $text = "Mau Lihat Command? Ketik /keyword";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -389,6 +389,164 @@ $push = array(
             )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == '/keyword') {
+	
+	        $balas = array(
+							'replyToken' => $replyToken,
+							'messages' => array(
+								array (
+										  'type' => 'template',
+										  'altText' => 'Menu',
+										  'template' => 
+										  array (
+										    'type' => 'carousel',
+										    'columns' => 
+										    array (
+										      0 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => '[DK] BOT Developer Support',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Welcome',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Welcome'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Admin',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Admin'
+												  ),
+										          2 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'About',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'About'
+										          ),
+										        ),
+										      ),
+										      1 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => 'Silahkan Di Klik Saja!',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Spam',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Spam'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Open Pagi',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Open Pagi'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Open Malam',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Open Malam'
+										          ),
+										        ),
+										      ),
+										      2 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => 'Info Lainnya Silakan Klik Lebih Lanjut..',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Menu 1',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Menu1'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Menu 2',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Menu2'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Menu 3',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Menu3'
+										          ),
+										        ),
+										      ),											  
+										    ),
+										  ),
+										)					
+			 
+        )
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
+    } else if ($command == 'Admin') {
+	
+	        $balas = array(
+							'replyToken' => $replyToken,
+							'messages' => array(
+								array (
+										  'type' => 'template',
+										  'altText' => 'Ini Admin',
+										  'template' => 
+										  array (
+										    'type' => 'carousel',
+										    'columns' => 
+										    array (
+										      0 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKVng7Bs8SWReUqx1yDyUC9fy345h9aDZPiWm5_jRJw2lWuGToQ',
+										        'title' => 'Deka Prabowo',
+										        'text' => 'Kalo Butuh Bantuan Silakan Chat ^_^',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+													'type' => 'uri',
+													'label' => 'Chat Line',
+													'data' => 'action=add&itemid=111',
+													'uri' => 'https://bit.ly/2J3ywc3'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'uri',
+													'label' => 'Instagram',
+													'data' => 'action=add&itemid=111',
+													'uri' => 'https://instagram.com/akedakad'
+												  ),
+										          2 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Payment',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Payment'
+										          ),
+										        ),
+										      ),											  
+										    ),
+										  ),
+										)					
+			 
+        )
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
+    } else if ($command == '/admin') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
