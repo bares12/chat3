@@ -405,7 +405,7 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => '[DK] BOT Developer Support',
+										        'text' => 'Developer Support',
 										        'actions' => 
 										        array (
 										          0 => 
@@ -512,7 +512,7 @@ $push = array(
 										    array (
 										      0 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKVng7Bs8SWReUqx1yDyUC9fy345h9aDZPiWm5_jRJw2lWuGToQ',
+										        'thumbnailImageUrl' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZjqnLG-Q6Qp7M1itw9GXL1hlLD18gnlD4b0beeokPDEX5TXjx',
 										        'title' => 'Deka Prabowo',
 										        'text' => 'Kalo Butuh Bantuan Silakan Chat ^_^',
 										        'actions' => 
@@ -546,14 +546,14 @@ $push = array(
 			 
         )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == '/admin') {
+    } else if ($command == 'menu1') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
 							'messages' => array(
 								array (
 										  'type' => 'template',
-										  'altText' => 'Silahkan Pilih Keyword Yang Anda Inginkan',
+										  'altText' => 'Daftar Menu',
 										  'template' => 
 										  array (
 										    'type' => 'carousel',
@@ -561,89 +561,89 @@ $push = array(
 										    array (
 										      0 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
-										        'title' => 'Keyword 1',
-										        'text' => 'Silahkan Dipilih',
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => 'Pemahaman Software, Silakan Klik Ingin Memahami',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Cari Anime',
+										            'label' => 'Cara Menggunakan...',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /anime [Judul Anime]'
+													'text' => 'Tutor Software'
 										          ),
 										          1 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Cari Sinopsis Anime',
+										            'label' => 'Arti Akun Limit',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /anime-syn [Judul Anime]'
+													'text' => 'Arti Limit Akun'
 												  ),
 										          2 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Cari Youtube',
+										            'label' => 'Arti Akun Tumbal',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /yt [URL Video Youtube]'
+													'text' => 'Arti Akun Tumbal'
 										          ),
 										        ),
 										      ),
 										      1 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
-										        'title' => 'Keyword 2',
-										        'text' => 'Silahkan Dipilih',
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => 'Pengertian Jenis Follower, Silakan Klik',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Cari Film',
+										            'label' => 'Follower Pasif',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /film [Judul Film]'
+													'text' => 'Follower Pasif'
 										          ),
 										          1 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Cari Sinopsis Film',
+													'label' => 'Follower Aktif',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /film-syn [Judul Film]'
+													'text' => 'Follower Aktif'
 										          ),
 										          2 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Cari Gambar',
+													'label' => 'Indo Or Worldwide',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /gambar [Kata Kunci]'
+													'text' => 'Indo Or Worldwide'
 										          ),
 										        ),
 										      ),
 										      2 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
-										        'title' => 'Keyword 3',
-										        'text' => 'Silahkan Dipilih',
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => 'Event For You, Klik Untuk Info Lebih Lanjut...',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Jadwal Shalat',
+										            'label' => 'Peraturan Event',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /shalat [Lokasi]'
+													'text' => 'Peraturan Event'
 										          ),
 										          1 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Cari Sinopsis Film',
+													'label' => 'Cara Mengikutin Event',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /cuaca [Lokasi]'
+													'text' => 'Cara Mengikutin Event'
 										          ),
 										          2 => 
 										          array (
 													'type' => 'uri',
-													'label' => 'Admin',
+													'label' => 'Contact Admin',
 													'data' => 'action=add&itemid=111',
 													'uri' => 'https://bit.ly/2J3ywc3'
 										          ),
@@ -655,14 +655,14 @@ $push = array(
 			 
         )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == '/admin') {
+    } else if ($command == 'menu2') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
 							'messages' => array(
 								array (
 										  'type' => 'template',
-										  'altText' => 'Silahkan Pilih Keyword Yang Anda Inginkan',
+										  'altText' => 'Daftar Menu',
 										  'template' => 
 										  array (
 										    'type' => 'carousel',
@@ -670,7 +670,7 @@ $push = array(
 										    array (
 										      0 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => 'Keyword 1',
 										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
@@ -700,7 +700,7 @@ $push = array(
 										      ),
 										      1 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => 'Keyword 2',
 										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
@@ -730,7 +730,7 @@ $push = array(
 										      ),
 										      2 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => 'Keyword 3',
 										        'text' => 'Silahkan Dipilih',
 										        'actions' => 
