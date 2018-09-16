@@ -496,6 +496,115 @@ $push = array(
 										)					
 			 
         )
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
+    } else if ($command == '/admin') {
+	
+	        $balas = array(
+							'replyToken' => $replyToken,
+							'messages' => array(
+								array (
+										  'type' => 'template',
+										  'altText' => 'Silahkan Pilih Keyword Yang Anda Inginkan',
+										  'template' => 
+										  array (
+										    'type' => 'carousel',
+										    'columns' => 
+										    array (
+										      0 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
+										        'title' => 'Keyword 1',
+										        'text' => 'Silahkan Dipilih',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Cari Anime',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /anime [Judul Anime]'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Cari Sinopsis Anime',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /anime-syn [Judul Anime]'
+												  ),
+										          2 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Cari Youtube',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /yt [URL Video Youtube]'
+										          ),
+										        ),
+										      ),
+										      1 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
+										        'title' => 'Keyword 2',
+										        'text' => 'Silahkan Dipilih',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Cari Film',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /film [Judul Film]'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Cari Sinopsis Film',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /film-syn [Judul Film]'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Cari Gambar',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /gambar [Kata Kunci]'
+										          ),
+										        ),
+										      ),
+										      2 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://zoovadoo.com/wp-content/uploads/2017/12/hei-u1.jpg',
+										        'title' => 'Keyword 3',
+										        'text' => 'Silahkan Dipilih',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Jadwal Shalat',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /shalat [Lokasi]'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Cari Sinopsis Film',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /cuaca [Lokasi]'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'uri',
+													'label' => 'Admin',
+													'data' => 'action=add&itemid=111',
+													'uri' => 'https://bit.ly/2J3ywc3'
+										          ),
+										        ),
+										      ),											  
+										    ),
+										  ),
+										)					
+			 
+        )
     );
 	}
 	
