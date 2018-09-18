@@ -473,21 +473,21 @@ $push = array(
 										            'type' => 'postback',
 										            'label' => 'Menu 1',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Menu1'
+													'text' => 'menu1'
 										          ),
 										          1 => 
 										          array (
 													'type' => 'postback',
 													'label' => 'Menu 2',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Menu2'
+													'text' => 'menu2'
 										          ),
 										          2 => 
 										          array (
 													'type' => 'postback',
 													'label' => 'Menu 3',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Menu3'
+													'text' => 'menu3'
 										          ),
 										        ),
 										      ),											  
@@ -553,7 +553,7 @@ $push = array(
 							'messages' => array(
 								array (
 										  'type' => 'template',
-										  'altText' => 'Daftar Menu',
+										  'altText' => 'Menu',
 										  'template' => 
 										  array (
 										    'type' => 'carousel',
@@ -563,29 +563,29 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Pemahaman Software, Silakan Klik Ingin Memahami',
+										        'text' => 'Developer Support',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Cara Menggunakan...',
+										            'label' => 'Welcome',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Tutor Software'
+													'text' => 'Welcome'
 										          ),
 										          1 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Arti Akun Limit',
+										            'label' => 'Admin',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Arti Limit Akun'
+													'text' => 'Admin'
 												  ),
 										          2 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Arti Akun Tumbal',
+										            'label' => 'About',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Arti Akun Tumbal'
+													'text' => 'About'
 										          ),
 										        ),
 										      ),
@@ -593,29 +593,29 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Pengertian Jenis Follower, Silakan Klik',
+										        'text' => 'Silahkan Di Klik Saja!',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Follower Pasif',
+										            'label' => 'Spam',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Follower Pasif'
+													'text' => 'Spam'
 										          ),
 										          1 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Follower Aktif',
+													'label' => 'Open Pagi',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Follower Aktif'
+													'text' => 'Open Pagi'
 										          ),
 										          2 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Indo Or Worldwide',
+													'label' => 'Open Malam',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Indo Or Worldwide'
+													'text' => 'Open Malam'
 										          ),
 										        ),
 										      ),
@@ -623,29 +623,29 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Event For You, Klik Untuk Info Lebih Lanjut...',
+										        'text' => 'Info Lainnya Silakan Klik Lebih Lanjut..',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Peraturan Event',
+										            'label' => 'Menu 1',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Peraturan Event'
+													'text' => 'Menu1'
 										          ),
 										          1 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Cara Mengikutin Event',
+													'label' => 'Menu 2',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Cara Mengikutin Event'
+													'text' => 'Menu2'
 										          ),
 										          2 => 
 										          array (
-													'type' => 'uri',
-													'label' => 'Contact Admin',
+													'type' => 'postback',
+													'label' => 'Menu 3',
 													'data' => 'action=add&itemid=111',
-													'uri' => 'https://bit.ly/2J3ywc3'
+													'text' => 'Menu3'
 										          ),
 										        ),
 										      ),											  
