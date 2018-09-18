@@ -546,14 +546,14 @@ $push = array(
 			 
         )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == 'menu1') {
+    } else if ($command == '/keyword') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
 							'messages' => array(
 								array (
 										  'type' => 'template',
-										  'altText' => 'Daftar Menu',
+										  'altText' => 'Menu',
 										  'template' => 
 										  array (
 										    'type' => 'carousel',
@@ -563,7 +563,7 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Pemahaman Software Silakan Klik Ingin Memahami',
+										        'text' => 'Pemahaman Software',
 										        'actions' => 
 										        array (
 										          0 => 
@@ -571,14 +571,14 @@ $push = array(
 										            'type' => 'postback',
 										            'label' => 'Cara Menggunakan',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Tutor Software'
+													'text' => 'Cara Menggunakan'
 										          ),
 										          1 => 
 										          array (
 										            'type' => 'postback',
 										            'label' => 'Arti Akun Limit',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Arti Limit Akun'
+													'text' => 'Arti Akun Limit'
 												  ),
 										          2 => 
 										          array (
@@ -593,15 +593,15 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Pengertian Jenis Follower Silakan Klik',
+										        'text' => 'Jenis Jenis Follower',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Indo Or Worldwide',
+										            'label' => 'Follower Aktif',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Indo Or Worldwide'
+													'text' => 'Follower Aktif'
 										          ),
 										          1 => 
 										          array (
@@ -613,9 +613,9 @@ $push = array(
 										          2 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Follower Aktif',
+													'label' => 'Indo Or Worldwide',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Follower Aktif'
+													'text' => 'Indo Or Worldwide'
 										          ),
 										        ),
 										      ),
@@ -623,29 +623,29 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Event For You Klik Untuk Info Lebih Lanjut',
+										        'text' => 'Event For You',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Cara Mengikutin Event',
+										            'label' => 'Peraturan Event',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Cara Mengikutin Event'
+													'text' => 'Peraturan Event'
 										          ),
 										          1 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Peraturan Event',
+													'label' => 'Cara Mengikutin Event',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Peraturan Event'
+													'text' => 'Cara Mengikutin Event'
 										          ),
 										          2 => 
 										          array (
-													'type' => 'uri',
+													'type' => 'postback',
 													'label' => 'Contact Admin',
 													'data' => 'action=add&itemid=111',
-													'uri' => 'https://bit.ly/2J3ywc3'
+													'text' => 'Admin'
 										          ),
 										        ),
 										      ),											  
