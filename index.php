@@ -546,7 +546,7 @@ $push = array(
 			 
         )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == '/keyword') {
+    } else if ($command == 'menu1') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
