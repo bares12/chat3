@@ -553,7 +553,7 @@ $push = array(
 							'messages' => array(
 								array (
 										  'type' => 'template',
-										  'altText' => 'Menu',
+										  'altText' => 'Daftar Menu',
 										  'template' => 
 										  array (
 										    'type' => 'carousel',
@@ -563,13 +563,13 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Pemahaman Software, Silakan Klik Ingin Memahami',
+										        'text' => 'Pemahaman Software Silakan Klik Ingin Memahami',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Cara Menggunakan...',
+										            'label' => 'Cara Menggunakan',
 										            'data' => 'action=add&itemid=111',
 													'text' => 'Tutor Software'
 										          ),
@@ -593,29 +593,29 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Pengertian Jenis Follower, Silakan Klik',
+										        'text' => 'Pengertian Jenis Follower Silakan Klik',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Follower Pasif',
+										            'label' => 'Indo Or Worldwide',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Follower Pasif'
+													'text' => 'Indo Or Worldwide'
 										          ),
 										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Follower Pasif',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Follower Pasif'
+										          ),
+										          2 => 
 										          array (
 													'type' => 'postback',
 													'label' => 'Follower Aktif',
 													'data' => 'action=add&itemid=111',
 													'text' => 'Follower Aktif'
-										          ),
-										          2 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Indo Or Worldwide',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Indo Or Worldwide'
 										          ),
 										        ),
 										      ),
@@ -623,22 +623,22 @@ $push = array(
 										      array (
 										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
 										        'title' => '[DK] BOT',
-										        'text' => 'Event For You, Klik Untuk Info Lebih Lanjut...',
+										        'text' => 'Event For You Klik Untuk Info Lebih Lanjut',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Peraturan Event',
+										            'label' => 'Cara Mengikutin Event',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Peraturan Event'
+													'text' => 'Cara Mengikutin Event'
 										          ),
 										          1 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Cara Mengikutin Event',
+													'label' => 'Peraturan Event',
 													'data' => 'action=add&itemid=111',
-													'text' => 'Cara Mengikutin Event'
+													'text' => 'Peraturan Event'
 										          ),
 										          2 => 
 										          array (
@@ -656,6 +656,115 @@ $push = array(
         )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
     } else if ($command == 'menu2') {
+	
+	        $balas = array(
+							'replyToken' => $replyToken,
+							'messages' => array(
+								array (
+										  'type' => 'template',
+										  'altText' => 'Daftar Menu',
+										  'template' => 
+										  array (
+										    'type' => 'carousel',
+										    'columns' => 
+										    array (
+										      0 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => 'Keyword 1',
+										        'text' => 'Silahkan Dipilih',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Cari Anime',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /anime [Judul Anime]'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Cari Sinopsis Anime',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /anime-syn [Judul Anime]'
+												  ),
+										          2 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Cari Youtube',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /yt [URL Video Youtube]'
+										          ),
+										        ),
+										      ),
+										      1 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => 'Keyword 2',
+										        'text' => 'Silahkan Dipilih',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Cari Film',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /film [Judul Film]'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Cari Sinopsis Film',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /film-syn [Judul Film]'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Cari Gambar',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /gambar [Kata Kunci]'
+										          ),
+										        ),
+										      ),
+										      2 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => 'Keyword 3',
+										        'text' => 'Silahkan Dipilih',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Jadwal Shalat',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /shalat [Lokasi]'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Cari Sinopsis Film',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Ketik /cuaca [Lokasi]'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'uri',
+													'label' => 'Admin',
+													'data' => 'action=add&itemid=111',
+													'uri' => 'https://bit.ly/2J3ywc3'
+										          ),
+										        ),
+										      ),											  
+										    ),
+										  ),
+										)					
+			 
+        )
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
+    } else if ($command == 'menu3') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
