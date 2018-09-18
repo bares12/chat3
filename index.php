@@ -546,7 +546,7 @@ $push = array(
 			 
         )
         );												#---------------------[TAMBAHAN FARZAIN]---------------------#
-    } else if ($command == 'menu1') {
+    } else if ($command == 'menu') {
 	
 	        $balas = array(
 							'replyToken' => $replyToken,
@@ -646,6 +646,115 @@ $push = array(
 													'label' => 'Contact Admin',
 													'data' => 'action=add&itemid=111',
 													'text' => 'Admin'
+										          ),
+										        ),
+										      ),											  
+										    ),
+										  ),
+										)					
+			 
+        )
+        );												#---------------------[TAMBAHAN FARZAIN]---------------------#
+    } else if ($command == 'menu1') {
+	
+	        $balas = array(
+							'replyToken' => $replyToken,
+							'messages' => array(
+								array (
+										  'type' => 'template',
+										  'altText' => 'Menu',
+										  'template' => 
+										  array (
+										    'type' => 'carousel',
+										    'columns' => 
+										    array (
+										      0 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => 'Developer Support',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Welcome',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Welcome'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Admin',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Admin'
+												  ),
+										          2 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'About',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'About'
+										          ),
+										        ),
+										      ),
+										      1 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => 'Silahkan Di Klik Saja!',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Spam',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'Spam'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Open Pagi',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Open Pagi'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Open Malam',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Open Malam'
+										          ),
+										        ),
+										      ),
+										      2 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://img.monocle.com/radio/shows/the-menu-final-5718a9900140e.jpg?w=440&h=440',
+										        'title' => '[DK] BOT',
+										        'text' => 'Info Lainnya Silakan Klik Lebih Lanjut..',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'Menu 1',
+										            'data' => 'action=add&itemid=111',
+													'text' => 'menu1'
+										          ),
+										          1 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Menu 2',
+													'data' => 'action=add&itemid=111',
+													'text' => 'menu2'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Menu 3',
+													'data' => 'action=add&itemid=111',
+													'text' => 'menu3'
 										          ),
 										        ),
 										      ),											  
